@@ -5,9 +5,11 @@ class Inventario:
 		
 	def agregar_producto(self):
 		nombre = input("Nombre: ").title()
+		
 		if self.producto_existe(nombre):
-    print("ERROR: El producto ya existe")
-    return
+			print("ERROR: El producto ya existe")
+			return
+		
 		if nombre == "":
 			print("ERROR: Nombre vacio")
 			return
@@ -47,10 +49,11 @@ class Inventario:
 			if p['nombre'] == nombre:
 				self.mostrar_producto(p)
 				return
+		
 		print("No encontrado")			
 	
 	def eliminar_producto(self):
-    nombre = input("Nombre del producto a eliminar: ").title()
+		nombre = input("Nombre del producto a eliminar: ").title()
 
     for p in self.inventario:
         if p["nombre"] == nombre:
@@ -66,11 +69,11 @@ class Inventario:
     print("No encontrado")
 
 	def mostrar_producto(self, producto):
-    print(
-        f"Nombre: {producto['nombre']} | "
-        f"Precio: {producto['precio']}$ | "
-        f"Stock: {producto['stock']}"
-	)
+		print(
+			f"Nombre: {producto['nombre']} | "
+			f"Precio: {producto['precio']}$ | "
+			f"Stock: {producto['stock']}"
+		)
 
 	def guardar_archivo(self):
 		with open("inventario.txt", "w") as archivo:
