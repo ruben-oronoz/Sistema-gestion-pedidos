@@ -1,25 +1,44 @@
-# Sistema de Gestión de Inventario
+# 📦 Sistema de Inventario en Python
 
-Este proyecto es un sistema de gestión de inventario desarrollado en Python.  
-Funciona desde consola y permite administrar productos de forma sencilla.
+Aplicación de consola desarrollada en **Python** utilizando **Programación Orientada a Objetos (POO)**.
+Permite gestionar un inventario de productos con persistencia en archivos.
 
-## Funcionalidades
-- Agregar productos al inventario
-- Mostrar todos los productos registrados
-- Buscar productos por nombre
-- Eliminar productos con confirmación
-- Mostrar resumen del inventario
-- Calcular el valor total del inventario
+---
 
-## Tecnologías usadas
+## 🚀 Funcionalidades
+
+- Agregar productos
+- Mostrar productos
+- Buscar productos
+- Eliminar productos
+- Guardado automático en archivo (`inventario.txt`)
+- Carga automática al iniciar el programa
+
+---
+
+## 🛠 Tecnologías utilizadas
+
 - Python 3
-- Listas y diccionarios
-- Funciones
-- Módulos
-- Manejo de errores (try / except)
+- Programación Orientada a Objetos (POO)
+- Manejo de archivos (`.txt`)
+- Estructuras de datos (listas y diccionarios)
 
-## Cómo ejecutar el proyecto
-1. Clonar el repositorio
-2. Ejecutar el archivo principal con:
-   ```bash
-   python menu.py
+---
+
+## 📂 Estructura del proyecto
+
+inventario_app/
+├── main.py
+├── inventario.py
+├── inventario.txt
+└── README.md
+
+---
+
+## ▶️ Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/ruben-oronoz/sistema-gestion-inventario.git
+
+python main.py
