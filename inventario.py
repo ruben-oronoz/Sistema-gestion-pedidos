@@ -38,14 +38,14 @@ class Inventario:
 			return
 		
 		for p in self.inventario:
-			print(f"{p['nombre']} | {p['precio']}$ | {p['stock']}")
+			self.mostrar_producto(p)
 			
 	def buscar_producto(self):
 		nombre = input("Nombre del producto a buscar: ").title()
 		
 		for p in self.inventario:
 			if p['nombre'] == nombre:
-				print(p)
+				self.mostrar_producto(p)
 				return
 		print("No encontrado")			
 	
@@ -64,7 +64,14 @@ class Inventario:
             return
 
     print("No encontrado")
-    	
+
+	def mostrar_producto(self, producto):
+    print(
+        f"Nombre: {producto['nombre']} | "
+        f"Precio: {producto['precio']}$ | "
+        f"Stock: {producto['stock']}"
+	)
+
 	def guardar_archivo(self):
 		with open("inventario.txt", "w") as archivo:
 				for p in self.inventario:
